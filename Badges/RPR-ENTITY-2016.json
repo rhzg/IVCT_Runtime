@@ -1,0 +1,21 @@
+{
+	"id": "RPR-ENTITY-2016",
+	"name": "RPR ENTITY 2016",
+	"description": "RPR-FOM v2.0 Physical FOM Module support. GRIM compliance wrt. Platforms, Lifeforms etc. representation of required attributes.",
+	"graphics": "/some/icon.png",
+	"dependency": [
+		"HLA-BASE-2016"
+	],
+	"requirements": [
+		{
+			"id": "IR-RPR2-0001",
+			"description": "SuT shall comply with SISO-STD-001-2015, Standard for Guidance, Rationale, and Interoperability Modalities for the Real-time Platform Reference Federation Object Model, Version 2.0, 10 August 2015",
+			"TC": "TestCaseName"
+		},
+		{
+			"id": "IP-RPR2-0002",
+			"description": "SuT shall define BaseEntity.AggregateEntity as published or define a subclass of BaseEntity.AggregateEntity as published and/or define BaseEntity.AggregateEntity as subscribed in CS/SOM.",
+			"TC": "TestCaseName"
+		}
+	]
+}

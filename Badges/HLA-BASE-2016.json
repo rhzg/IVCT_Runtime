@@ -1,0 +1,36 @@
+{
+	"id" 			: 	"HLA-BASE-2016",
+	"name" 			: 	"HLA Basic Test 2016",
+	"description"	:	"Basic CS/SOM and Best Practices compliance",
+	"graphics"		:	"/some/icon.png",
+	"packageName"	:	"fr.....",
+	"tsRunTimefolder":	"..../bin",
+	"dependency"	:	[],
+	"requirements"	:	[
+		{
+			"id"			:	"IR-BP-0001",
+			"description"	:	"SuT shall provide attribute value updates for requested attributes owned by the SuT",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IP-BP-0002",
+			"description"	:	"SuT shall create a federation execution before joining, if it does not already exist",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-BP-0005",
+			"description"	:	"SuT shall remove at least one object instance if RemoveObjectInstance HLA service is described as used in CS/SOM",
+			"TC"			:	"HLA-Services-Verification"
+		},
+		{
+			"id"			:	"IR-BP-0006",
+			"description"	:	"SuT shall resign federation if ResignFederation HLA service is described as used in CS/SOM",
+			"TC"			:	"HLA-Services-Verification"
+		},
+		{
+			"id"			:	"IR-BP-0007",
+			"description"	:	"SuT shall only update values, for attributes with Enumerated Datatype, compliant with Distributed Simulation Agreement",
+			"TC"			:	"HLA-Services-Verification"
+		}
+	]
+}

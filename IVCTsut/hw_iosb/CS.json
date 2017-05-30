@@ -1,0 +1,6 @@
+{
+	"id" 			: 	"hw_iosb",
+	"description"	:	"HellowWorld system under federate for IVCT demonstration",
+	"vendor"		:	"Fraunhofer IOSB",
+	"badge"			:	["HelloWorld"] 
+}
