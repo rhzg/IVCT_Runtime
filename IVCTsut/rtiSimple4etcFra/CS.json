@@ -1,0 +1,6 @@
+{
+	"id" 			: 	"rtiSimple4etcFra",
+	"description"	:	"Common test federate to test ETC",
+	"vendor"		:	"Capgemini France",
+	"badge"			:	["HLA-BASE-2016"] 
+}

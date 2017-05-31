@@ -1,0 +1,26 @@
+{
+	"id" 			: 	"HLA-Verification-2016",
+	"name" 			: 	"HLA Verification Test 2016",
+	"description"	:	"This test case is equivalent to the FCTT_NG configuration verification step.",
+	"graphics"		:	"/some/icon.png",
+	"packageName"	:	"fr.....",
+	"tsRunTimefolder":	"..../bin",
+	"dependency"	:	[],
+	"requirements"	:	[
+		{
+			"id"			:	"IR-DOC-0001",
+			"description"	:	"SuT interoperability capabilities shall be documented in a Conformance Statement including a SOM and a FOM with a minimum set of supporting FOM modules",
+			"TC"			:	"TC_001_Files_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0001",
+			"description"	:	"SuT CS/SOM shall be valid",
+			"TC"			:	"TC_001_Files_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0002",
+			"description"	:	"SuT CS/SOM shall be consistent",
+			"TC"			:	"TC_001_Files_Check"
+		}
+	]
+}

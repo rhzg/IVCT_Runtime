@@ -2,5 +2,5 @@
 	"id" 			: 	"SuT3",
 	"description"	:	"Just another demonstration",
 	"vendor"		:	"AnyCompany3",
-	"badge"			:	["HLA-BASE-2016", "CWIX-2017"]
+	"badge"			:	["HLA-BASE-2016", "CWIX-2017", "HLA-Verification-2016", "HLA-Declaration-2016", "HLA-Object-2016", "HLA-Services-2016"]
 }

@@ -5,7 +5,7 @@
 	"graphics"		:	"/some/icon.png",
 	"packageName"	:	"fr.....",
 	"tsRunTimefolder":	"..../bin",
-	"dependency"	:	[],
+	"dependency"	:	["HLA-Verification", "HLA-Declaration", "HLA-Object", "HLA-Services"],
 	"requirements"	:	[
 		{
 			"id"			:	"IR-BP-0001",
@@ -15,6 +15,16 @@
 		{
 			"id"			:	"IP-BP-0002",
 			"description"	:	"SuT shall create a federation execution before joining, if it does not already exist",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-BP-0003",
+			"description"	:	"SuT shall create or join a federation execution with only those FOM modules that are specified in CS",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IP-BP-0004",
+			"description"	:	"SuT shall be configurable for the following parameters: FederateType, FederateName, FederationName",
 			"TC"			:	"TC_001_Object_Interaction_Check"
 		},
 		{
@@ -31,6 +41,111 @@
 			"id"			:	"IR-BP-0007",
 			"description"	:	"SuT shall only update values, for attributes with Enumerated Datatype, compliant with Distributed Simulation Agreement",
 			"TC"			:	"HLA-Services-Verification"
-		}
+		},
+		{
+			"id"			:	"IR-DOC-0001",
+			"description"	:	"SuT interoperability capabilities shall be documented in a Conformance Statement including a SOM and a FOM with a minimum set of supporting FOM modules",
+			"TC"			:	"TC_001_Files_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0001",
+			"description"	:	"SuT CS/SOM shall be valid",
+			"TC"			:	"TC_001_Files_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0002",
+			"description"	:	"SuT CS/SOM shall be consistent",
+			"TC"			:	"TC_001_Files_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0003",
+			"description"	:	"SuT shall publish all object class attributes defined as published in CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0004",
+			"description"	:	"SuT shall not publish any object class attribute that is not defined as published in CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0005",
+			"description"	:	"SuT shall publish all interaction classes defined as published is CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0006",
+			"description"	:	"SuT shall not publish any interaction class that is not defined as published is CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0007",
+			"description"	:	"SuT shall subscribe to all object class attributes defined as subscribed in CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0008",
+			"description"	:	"SuT shall not subscribe to any object class attribute that is not defined as subscribed in CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0009",
+			"description"	:	"SuT shall subscribe to all interaction classes defined as subscribed in CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0010",
+			"description"	:	"SuT shall not subscribe to any interaction class that is not defined as subscribed in CS/SOM",
+			"TC"			:	"TC_001_Publish_Subscribe_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0011",
+			"description"	:	"SuT shall register at least one object instance for each published object class",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0012",
+			"description"	:	"SuT shall discover object instances for all object classes with attributes defined as subscribed in CS/SOM",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0013",
+			"description"	:	"SuT shall update attribute values for each published object class attribute",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0014",
+			"description"	:	"SuT shall reflect attribute values for each subscribed object class attribute",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0015",
+			"description"	:	"SuT shall send at least one interaction for each published interaction class",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0016",
+			"description"	:	"SuT shall receive interactions for each subscribed interaction class",
+			"TC"			:	"TC_001_Object_Interaction_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0017",
+			"description"	:	"SuT shall encode all updated attribute values according to CS/SOM",
+			"TC"			:	"FOM Data Encoding Verification"
+		},
+		{
+			"id"			:	"IR-SOM-0018",
+			"description"	:	"SuT shall encode all sent interaction class parameters according to CS/SOM",
+			"TC"			:	"FOM Data Encoding Verification"
+		},
+		{
+			"id"			:	"IR-SOM-0019",
+			"description"	:	"SuT shall implement/use all HLA services as described as implemented/used in CS/SOM",
+			"TC"			:	"TC_001_Services_Check"
+		},
+		{
+			"id"			:	"IR-SOM-0020",
+			"description"	:	"SuT shall not implement/use any HLA service that is not described as implemented/used in CS/SOM",
+			"TC"			:	"TC_001_Services_Check"
+		}		
 	]
 }

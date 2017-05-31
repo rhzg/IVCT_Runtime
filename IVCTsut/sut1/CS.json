@@ -2,5 +2,5 @@
 	"id" 			: 	"SuT1",
 	"description"	:	"Just for demonstration",
 	"vendor"		:	"AnyCompany",
-	"badge"			:	["HLA-BASE-2016", "HelloWorld", "RPR-ENTITY-2016", "RPR-AGG-2016"] 
+	"badge"			:	["HLA-BASE"] 
 }
