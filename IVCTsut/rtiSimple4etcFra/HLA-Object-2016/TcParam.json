@@ -1,0 +1,14 @@
+{
+  "federationName"  : "FEDERATION_TEST"
+  "sutName"         : "TestFederate"
+  "rtiAddress"      : "127.0.0.1"
+  "rtiPort"         : "8989"
+  "testDuration"    : "60"
+  "resultDirectory" : "C:\Projekte\MSG134\IVCT_Runtime\IVCTsut\rtiSimple4etcFra\HLA-Object-2016"
+  "fomFiles"        : [
+    { "fileName"    : "C:\Projekte\MSG134\IVCT_Runtime\IVCTsut\rtiSimple4etcFra\HLA-Object-2016\MAKsimple1516e.xml" }
+  ]
+  "somFiles"        : [
+    { "fileName"    : "C:\Projekte\MSG134\IVCT_Runtime\IVCTsut\rtiSimple4etcFra\HLA-Object-2016\SOM_MAKsimple1516e.xml" }
+  ]
+}

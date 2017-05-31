@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectModel xsi:schemaLocation="http://standards.ieee.org/IEEE1516-2010 http://standards.ieee.org/downloads/1516/1516.2-2010/IEEE1516-DIF-2010.xsd" xmlns="http://standards.ieee.org/IEEE1516-2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <modelIdentification>
+      <name>MAKsimple</name>
+      <type>SOM</type>
+      <version>1.0</version>
+      <modificationDate>2010-04-22</modificationDate>
+      <securityClassification>Unclassified</securityClassification>
+      <purpose>Example SOM</purpose>
+      <applicationDomain>RTI Demonstration</applicationDomain>
+      <description>Example SOM to be used with the HLA Evolved version of the rtisimple federate.</description>
+      <poc>
+         <pocName>VT MAK</pocName>
+         <pocOrg>VT MAK</pocOrg>
+         <pocTelephone>+1 (617) 876-8085</pocTelephone>
+         <pocEmail>support@mak.com</pocEmail>
+      </poc>
+   </modelIdentification>
+ <serviceUtilization>
+		<connect section="4.2" isCallback="false" isUsed="true"/>
+		<disconnect section="4.3" isCallback="false" isUsed="true"/>
+		<connectionLost section="4.4" isCallback="true" isUsed="false"/>
+		<createFederationExecution section="4.5" isCallback="false" isUsed="true"/>
+		<destroyFederationExecution section="4.6" isCallback="false" isUsed="true"/>
+		<listFederationExecutions section="4.7" isCallback="false" isUsed="false"/>
+		<reportFederationExecutions section="4.8" isCallback="true" isUsed="false"/>
+		<joinFederationExecution section="4.9" isCallback="false" isUsed="true"/>
+		<resignFederationExecution section="4.10" isCallback="false" isUsed="true"/>
+		<registerFederationSynchronizationPoint section="4.11" isCallback="false" isUsed="false"/>
+		<confirmSynchronizationPointRegistration section="4.12" isCallback="true" isUsed="false"/>
+		<announceSynchronizationPoint section="4.13" isCallback="true" isUsed="false"/>
+		<synchronizationPointAchieved section="4.14" isCallback="false" isUsed="false"/>
+		<federationSynchronized section="4.15" isCallback="true" isUsed="false"/>
+		<requestFederationSave section="4.16" isCallback="false" isUsed="false"/>
+		<initiateFederateSave section="4.17" isCallback="true" isUsed="false"/>
+		<federateSaveBegun section="4.18" isCallback="false" isUsed="false"/>
+		<federateSaveComplete section="4.19" isCallback="false" isUsed="false"/>
+		<federationSaved section="4.20" isCallback="true" isUsed="false"/>
+		<abortFederationSave section="4.21" isCallback="false" isUsed="false"/>
+		<queryFederationSaveStatus section="4.22" isCallback="false" isUsed="false"/>
+		<federationSaveStatusResponse section="4.23" isCallback="true" isUsed="false"/>
+		<requestFederationRestore section="4.24" isCallback="false" isUsed="false"/>
+		<confirmFederationRestorationRequest section="4.25" isCallback="true" isUsed="false"/>
+		<federationRestoreBegun section="4.26" isCallback="true" isUsed="false"/>
+		<initiateFederateRestore section="4.27" isCallback="true" isUsed="false"/>
+		<federateRestoreComplete section="4.28" isCallback="false" isUsed="false"/>
+		<federationRestored section="4.29" isCallback="true" isUsed="false"/>
+		<abortFederationRestore section="4.30" isCallback="false" isUsed="false"/>
+		<queryFederationRestoreStatus section="4.31" isCallback="false" isUsed="false"/>
+		<federationRestoreStatusResponse section="4.32" isCallback="true" isUsed="false"/>
+		<publishObjectClassAttributes section="5.2" isCallback="false" isUsed="true"/>
+		<unpublishObjectClassAttributes section="5.3" isCallback="false" isUsed="false"/>
+		<publishInteractionClass section="5.4" isCallback="false" isUsed="true"/>
+		<unpublishInteractionClass section="5.5" isCallback="false" isUsed="false"/>
+		<subscribeObjectClassAttributes section="5.6" isCallback="false" isUsed="true"/>
+		<unsubscribeObjectClassAttributes section="5.7" isCallback="false" isUsed="false"/>
+		<subscribeInteractionClass section="5.8" isCallback="false" isUsed="true"/>
+		<unsubscribeInteractionClass section="5.9" isCallback="false" isUsed="false"/>
+		<startRegistrationForObjectClass section="5.10" isCallback="true" isUsed="true"/>
+		<stopRegistrationForObjectClass section="5.11" isCallback="true" isUsed="true"/>
+		<turnInteractionsOn section="5.12" isCallback="true" isUsed="true"/>
+		<turnInteractionsOff section="5.13" isCallback="true" isUsed="true"/>
+		<reserveObjectInstanceName section="6.2" isCallback="false" isUsed="true"/>
+		<objectInstanceNameReserved section="6.3" isCallback="true" isUsed="true"/>
+		<releaseObjectInstanceName section="6.4" isCallback="false" isUsed="false"/>
+		<reserveMultipleObjectInstanceNames section="6.5" isCallback="false" isUsed="false"/>
+		<multipleObjectInstanceNamesReserved section="6.6" isCallback="true" isUsed="false"/>
+		<releaseMultipleObjectInstanceNames section="6.7" isCallback="false" isUsed="false"/>
+		<registerObjectInstance section="6.8" isCallback="false" isUsed="true"/>
+		<discoverObjectInstance section="6.9" isCallback="true" isUsed="true"/>
+		<updateAttributeValues section="6.10" isCallback="false" isUsed="true"/>
+		<reflectAttributeValues section="6.11" isCallback="true" isUsed="true"/>
+		<sendInteraction section="6.12" isCallback="false" isUsed="true"/>
+		<receiveInteraction section="6.13" isCallback="true" isUsed="true"/>
+		<deleteObjectInstance section="6.14" isCallback="false" isUsed="true"/>
+		<removeobjectinstance section="6.15" isCallback="true" isUsed="true"/>
+		<localDeleteObjectInstance section="6.16" isCallback="false" isUsed="false"/>
+		<attributesInScope section="6.17" isCallback="true" isUsed="false"/>
+		<attributesOutOfScope section="6.18" isCallback="true" isUsed="false"/>
+		<requestAttributeValueUpdate section="6.19" isCallback="false" isUsed="false"/>
+		<provideAttributeValueUpdate section="6.20" isCallback="true" isUsed="false"/>
+		<turnUpdatesOnForObjectInstance section="6.21" isCallback="true" isUsed="true"/>
+		<turnUpdatesOffForObjectInstance section="6.22" isCallback="true" isUsed="true"/>
+		<requestAttributeTransportationTypeChange section="6.23" isCallback="false" isUsed="false"/>
+		<confirmAttributeTransportationTypeChange section="6.24" isCallback="true" isUsed="false"/>
+		<queryAttributeTransportationType section="6.25" isCallback="false" isUsed="false"/>
+		<reportAttributeTransportationType section="6.26" isCallback="true" isUsed="false"/>
+		<requestInteractionTransportationTypeChange section="6.27" isCallback="false" isUsed="false"/>
+		<confirmInteractionTransportationTypeChange section="6.28" isCallback="true" isUsed="false"/>
+		<queryInteractionTransportationType section="6.29" isCallback="false" isUsed="false"/>
+		<reportInteractionTransportationType section="6.30" isCallback="true" isUsed="false"/>
+		<unconditionalAttributeOwnershipDivestiture section="7.2" isCallback="false" isUsed="false"/>
+		<negotiatedAttributeOwnershipDivestiture section="7.3" isCallback="false" isUsed="false"/>
+		<requestAttributeOwnershipAssumption section="7.4" isCallback="true" isUsed="false"/>
+		<requestDivestitureConfirmation section="7.5" isCallback="true" isUsed="false"/>
+		<confirmDivestiture section="7.6" isCallback="false" isUsed="false"/>
+		<attributeOwnershipAcquisitionNotification section="7.7" isCallback="true" isUsed="false"/>
+		<attributeOwnershipAcquisition section="7.8" isCallback="false" isUsed="false"/>
+		<attributeOwnershipAcquisitionIfAvailable section="7.9" isCallback="false" isUsed="false"/>
+		<attributeOwnershipUnavailable section="7.10" isCallback="true" isUsed="false"/>
+		<requestAttributeOwnershipRelease section="7.11" isCallback="true" isUsed="false"/>
+		<attributeOwnershipReleaseDenied section="7.12" isCallback="false" isUsed="false"/>
+		<attributeOwnershipDivestitureIfWanted section="7.13" isCallback="false" isUsed="false"/>
+		<cancelNegotiatedAttributeOwnershipDivestiture section="7.14" isCallback="false" isUsed="false"/>
+		<cancelAttributeOwnershipAcquisition section="7.15" isCallback="false" isUsed="false"/>
+		<confirmAttributeOwnershipAcquisitionCancellation section="7.16" isCallback="true" isUsed="false"/>
+		<queryAttributeOwnership section="7.17" isCallback="false" isUsed="false"/>
+		<informAttributeOwnership section="7.18" isCallback="true" isUsed="false"/>
+		<isAttributeOwnedByFederate section="7.19" isCallback="false" isUsed="false"/>
+		<enableTimeRegulation section="8.2" isCallback="false" isUsed="false"/>
+		<timeRegulationEnabled section="8.3" isCallback="true" isUsed="false"/>
+		<disableTimeRegulation section="8.4" isCallback="false" isUsed="false"/>
+		<enableTimeConstrained section="8.5" isCallback="false" isUsed="false"/>
+		<timeConstrainedEnabled section="8.6" isCallback="true" isUsed="false"/>
+		<disableTimeConstrained section="8.7" isCallback="false" isUsed="false"/>
+		<timeAdvanceRequest section="8.8" isCallback="false" isUsed="false"/>
+		<timeAdvanceRequestAvailable section="8.9" isCallback="false" isUsed="false"/>
+		<nextMessageRequest section="8.10" isCallback="false" isUsed="false"/>
+		<nextMessageRequestAvailable section="8.11" isCallback="false" isUsed="false"/>
+		<flushQueueRequest section="8.12" isCallback="false" isUsed="false"/>
+		<timeAdvanceGrant section="8.13" isCallback="true" isUsed="false"/>
+		<enableAsynchronousDelivery section="8.14" isCallback="false" isUsed="false"/>
+		<disableAsynchronousDelivery section="8.15" isCallback="false" isUsed="false"/>
+		<queryGALT section="8.16" isCallback="false" isUsed="false"/>
+		<queryLogicalTime section="8.17" isCallback="false" isUsed="false"/>
+		<queryLITS section="8.18" isCallback="false" isUsed="false"/>
+		<modifyLookahead section="8.19" isCallback="false" isUsed="false"/>
+		<queryLookahead section="8.20" isCallback="false" isUsed="false"/>
+		<retract section="8.21" isCallback="false" isUsed="false"/>
+		<requestRetraction section="8.22" isCallback="true" isUsed="false"/>
+		<changeAttributeOrderType section="8.23" isCallback="false" isUsed="false"/>
+		<changeInteractionOrderType section="8.24" isCallback="false" isUsed="false"/>
+		<createRegion section="9.2" isCallback="false" isUsed="false"/>
+		<commitRegionModifications section="9.3" isCallback="false" isUsed="false"/>
+		<deleteRegion section="9.4" isCallback="false" isUsed="false"/>
+		<registerObjectInstanceWithRegions section="9.5" isCallback="false" isUsed="false"/>
+		<associateRegionsForUpdates section="9.6" isCallback="false" isUsed="false"/>
+		<unassociateRegionsForUpdates section="9.7" isCallback="false" isUsed="false"/>
+		<subscribeObjectClassAttributesWithRegions section="9.8" isCallback="false" isUsed="false"/>
+		<unsubscribeObjectClassAttributesWithRegions section="9.9" isCallback="false" isUsed="false"/>
+		<subscribeInteractionClassWithRegions section="9.10" isCallback="false" isUsed="false"/>
+		<unsubscribeInteractionClassWithRegions section="9.11" isCallback="false" isUsed="false"/>
+		<sendInteractionWithRegions section="9.12" isCallback="false" isUsed="false"/>
+		<requestAttributeValueUpdateWithRegions section="9.13" isCallback="false" isUsed="false"/>
+		<getAutomaticResignDirective section="10.2" isCallback="false" isUsed="false"/>
+		<setAutomaticResignDirective section="10.3" isCallback="false" isUsed="false"/>
+		<getFederateHandle section="10.4" isCallback="false" isUsed="false"/>
+		<getFederateName section="10.5" isCallback="false" isUsed="false"/>
+		<getObjectClassHandle section="10.6" isCallback="false" isUsed="true"/>
+		<getObjectClassName section="10.7" isCallback="false" isUsed="false"/>
+		<getKnownObjectClassHandle section="10.8" isCallback="false" isUsed="false"/>
+		<getObjectInstanceHandle section="10.9" isCallback="false" isUsed="false"/>
+		<getObjectInstanceName section="10.10" isCallback="false" isUsed="true"/>
+		<getAttributeHandle section="10.11" isCallback="false" isUsed="true"/>
+		<getAttributeName section="10.12" isCallback="false" isUsed="false"/>
+		<getUpdateRateValue section="10.13" isCallback="false" isUsed="false"/>
+		<getUpdateRateValueForAttribute section="10.14" isCallback="false" isUsed="false"/>
+		<getInteractionClassHandle section="10.15" isCallback="false" isUsed="true"/>
+		<getInteractionClassName section="10.16" isCallback="false" isUsed="false"/>
+		<getParameterHandle section="10.17" isCallback="false" isUsed="true"/>
+		<getParameterName section="10.18" isCallback="false" isUsed="false"/>
+		<getOrderType section="10.19" isCallback="false" isUsed="false"/>
+		<getOrderName section="10.20" isCallback="false" isUsed="false"/>
+		<getTransportationTypeHandle section="10.21" isCallback="false" isUsed="false"/>
+		<getTransportationTypeName section="10.22" isCallback="false" isUsed="false"/>
+		<getAvailableDimensionsForClassAttribute section="10.23" isCallback="false" isUsed="false"/>
+		<getAvailableDimensionsForInteractionClass section="10.24" isCallback="false" isUsed="false"/>
+		<getDimensionHandle section="10.25" isCallback="false" isUsed="false"/>
+		<getDimensionName section="10.26" isCallback="false" isUsed="false"/>
+		<getDimensionUpperBound section="10.27" isCallback="false" isUsed="false"/>
+		<getDimensionHandleSet section="10.28" isCallback="false" isUsed="false"/>
+		<getRangeBounds section="10.29" isCallback="false" isUsed="false"/>
+		<setRangeBounds section="10.30" isCallback="false" isUsed="false"/>
+		<normalizeFederateHandle section="10.31" isCallback="false" isUsed="false"/>
+		<normalizeServiceGroup section="10.32" isCallback="false" isUsed="false"/>
+		<enableObjectClassRelevanceAdvisorySwitch section="10.33" isCallback="false" isUsed="false"/>
+		<disableObjectClassRelevanceAdvisorySwitch section="10.34" isCallback="false" isUsed="false"/>
+		<enableAttributeRelevanceAdvisorySwitch section="10.35" isCallback="false" isUsed="false"/>
+		<disableAttributeRelevanceAdvisorySwitch section="10.36" isCallback="false" isUsed="false"/>
+		<enableAttributeScopeAdvisorySwitch section="10.37" isCallback="false" isUsed="false"/>
+		<disableAttributeScopeAdvisorySwitch section="10.38" isCallback="false" isUsed="false"/>
+		<enableInteractionRelevanceAdvisorySwitch section="10.39" isCallback="false" isUsed="false"/>
+		<disableInteractionRelevanceAdvisorySwitch section="10.40" isCallback="false" isUsed="false"/>
+		<evokeCallback section="10.41" isCallback="false" isUsed="false"/>
+		<evokeMultipleCallbacks section="10.42" isCallback="false" isUsed="true"/>
+		<enableCallbacks section="10.43" isCallback="false" isUsed="false"/>
+		<disableCallbacks section="10.44" isCallback="false" isUsed="false"/>
+	</serviceUtilization>
+  <objects>
+      <objectClass>
+         <name>HLAobjectRoot</name>
+         <sharing>Neither</sharing>
+         <objectClass>
+            <name>BaseEntity</name>
+            <sharing>PublishSubscribe</sharing>
+            <attribute>
+               <name>AccelerationVector</name>
+               <dataType>HLAASCIIstring</dataType>
+               <updateType>NA</updateType>
+               <updateCondition>NA</updateCondition>
+               <ownership>NoTransfer</ownership>
+               <sharing>PublishSubscribe</sharing>
+               <dimensions/>
+               <transportation>HLAbestEffort</transportation>
+               <order>TimeStamp</order>
+            </attribute>
+            <attribute>
+               <name>DeadReckoningAlgorithm</name>
+               <dataType>HLAASCIIstring</dataType>
+               <updateType>NA</updateType>
+               <updateCondition>NA</updateCondition>
+               <ownership>NoTransfer</ownership>
+               <sharing>PublishSubscribe</sharing>
+               <dimensions/>
+               <transportation>HLAbestEffort</transportation>
+               <order>TimeStamp</order>
+            </attribute>
+            <attribute>
+               <name>Orientation</name>
+               <dataType>HLAASCIIstring</dataType>
+               <updateType>NA</updateType>
+               <updateCondition>NA</updateCondition>
+               <ownership>NoTransfer</ownership>
+               <sharing>PublishSubscribe</sharing>
+               <dimensions/>
+               <transportation>HLAbestEffort</transportation>
+               <order>TimeStamp</order>
+            </attribute>
+            <attribute>
+               <name>WorldLocation</name>
+               <dataType>HLAASCIIstring</dataType>
+               <updateType>NA</updateType>
+               <updateCondition>NA</updateCondition>
+               <ownership>NoTransfer</ownership>
+               <sharing>PublishSubscribe</sharing>
+               <dimensions/>
+               <transportation>HLAbestEffort</transportation>
+               <order>TimeStamp</order>
+            </attribute>
+            <attribute>
+               <name>VelocityVector</name>
+               <dataType>HLAASCIIstring</dataType>
+               <updateType>NA</updateType>
+               <updateCondition>NA</updateCondition>
+               <ownership>NoTransfer</ownership>
+               <sharing>PublishSubscribe</sharing>
+               <dimensions/>
+               <transportation>HLAbestEffort</transportation>
+               <order>TimeStamp</order>
+            </attribute>
+         </objectClass>
+      </objectClass>
+   </objects>
+   <interactions>
+      <interactionClass>
+         <name>HLAinteractionRoot</name>
+         <sharing>PublishSubscribe</sharing>
+         <transportation>HLAreliable</transportation>
+         <order>TimeStamp</order>
+         <interactionClass>
+            <name>WeaponFire</name>
+            <sharing>PublishSubscribe</sharing>
+            <dimensions/>
+            <transportation>HLAbestEffort</transportation>
+            <order>Receive</order>
+            <semantics>Communicates information associated with the firing or 
+               launch of a munition.
+            </semantics>
+            <parameter>
+               <name>EventIdentifier</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>An ID, generated by the issuing federate, used to 
+                  associated related fire and detonation events.
+               </semantics>
+            </parameter>
+            <parameter>
+               <name>FireControlSolutionRange</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The range used in the fire control solution. Zero 
+                  if the range is unknown or inapplicable.
+               </semantics>
+            </parameter>
+            <parameter>
+               <name>FireMissionIndex</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>A unique index to identify the fire mission (used 
+                  to associated weapon fire interactions in a single fire 
+                  mission).
+               </semantics>
+            </parameter>
+            <parameter>
+               <name>FiringLocation</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The location, the world coordinate system, of the 
+                  weapon fire.
+               </semantics>
+            </parameter>
+            <parameter>
+               <name>FiringObjectIdentifier</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The ID of the object ffiring the munition.</semantics>
+            </parameter>
+            <parameter>
+               <name>FuseType</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The type of fuse on the munition.</semantics>
+            </parameter>
+            <parameter>
+               <name>InitialVelocityVector</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The velocity vector of the munition when fired.</semantics>
+            </parameter>
+            <parameter>
+               <name>MunitionObjectIdentifier</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The ID of the associated munition object (if any).</semantics>
+            </parameter>
+            <parameter>
+               <name>MunitionType</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The type of munition being fired.</semantics>
+            </parameter>
+            <parameter>
+               <name>QuantityFired</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The number of rounds fired in the fire event.</semantics>
+            </parameter>
+            <parameter>
+               <name>RateOfFire</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The rate of fire at which the munitions in the burst 
+                  described in the fire event.
+               </semantics>
+            </parameter>
+            <parameter>
+               <name>TargetObjectIdentifier</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The ID of the object being fired at (if any).</semantics>
+            </parameter>
+            <parameter>
+               <name>WarheadType</name>
+               <dataType>HLAASCIIstring</dataType>
+               <semantics>The type of warhead fitted to the munition being 
+                  fired.
+               </semantics>
+            </parameter>
+         </interactionClass>
+      </interactionClass>
+   </interactions>
+   <dimensions/>
+   <time>
+      <timeStamp>
+         <dataType>NA</dataType>
+         <semantics>NA</semantics>
+      </timeStamp>
+      <lookahead>
+         <dataType>NA</dataType>
+         <semantics>NA</semantics>
+      </lookahead>
+   </time>
+   <tags>
+      <updateReflectTag>
+         <dataType>HLAASCIIstring</dataType>
+         <semantics>NA</semantics>
+      </updateReflectTag>
+      <sendReceiveTag>
+         <dataType>HLAASCIIstring</dataType>
+         <semantics>NA</semantics>
+      </sendReceiveTag>
+      <deleteRemoveTag>
+         <dataType>HLAASCIIstring</dataType>
+         <semantics>NA</semantics>
+      </deleteRemoveTag>
+      <divestitureRequestTag>
+         <dataType>HLAASCIIstring</dataType>
+         <semantics>NA</semantics>
+      </divestitureRequestTag>
+      <divestitureCompletionTag>
+         <dataType>HLAASCIIstring</dataType>
+         <semantics>NA</semantics>
+      </divestitureCompletionTag>
+      <acquisitionRequestTag>
+         <dataType>HLAASCIIstring</dataType>
+         <semantics>NA</semantics>
+      </acquisitionRequestTag>
+      <requestUpdateTag>
+         <dataType>HLAASCIIstring</dataType>
+         <semantics>NA</semantics>
+      </requestUpdateTag>
+   </tags>
+   <synchronizations>
+      <synchronizationPoint>
+         <label>First</label>         
+      </synchronizationPoint>     
+   </synchronizations>
+   <transportations>
+      <transportation>
+         <name>HLAreliable</name>
+         <reliable>Yes</reliable>
+         <semantics>Provide reliable delivery of data in the sense that TCP/IP delivers its data reliably</semantics>
+      </transportation>
+      <transportation>
+         <name>HLAbestEffort</name>
+         <reliable>No</reliable>
+         <semantics>Make an effort to deliver data in the sense that UDP provides best-effort delivery</semantics>
+      </transportation>
+   </transportations>
+   <switches>
+      <autoProvide isEnabled="false"/>
+      <conveyRegionDesignatorSets isEnabled="false"/>
+      <conveyProducingFederate isEnabled="false"/>
+      <attributeScopeAdvisory isEnabled="false"/>
+      <attributeRelevanceAdvisory isEnabled="true"/>
+      <objectClassRelevanceAdvisory isEnabled="true"/>
+      <interactionRelevanceAdvisory isEnabled="true"/>
+      <serviceReporting isEnabled="false"/>
+      <exceptionReporting isEnabled="false"/>
+      <delaySubscriptionEvaluation isEnabled="false"/>
+      <automaticResignAction resignAction="DeleteObjects"/>
+   </switches>
+   <updateRates>
+		<updateRate>
+			<name>low</name>
+			<rate>0.1</rate>
+			<semantics>Provides an update rate of 0.1 hertz</semantics>
+		</updateRate>
+		<updateRate>
+			<name>med</name>
+			<rate>1.0</rate>
+			<semantics>Provides an update rate of 1.0 hertz</semantics>
+		</updateRate>
+		<updateRate>
+			<name>high</name>
+			<rate>10.0</rate>
+			<semantics>Provides an update rate of 10.0 hertz</semantics>
+		</updateRate>
+   </updateRates>
+   <dataTypes>
+      <basicDataRepresentations>
+         <basicData>
+            <name>HLAinteger16BE</name>
+            <size>16</size>
+            <interpretation>Integer in the range [-2^15, 2^15 - 1]</interpretation>
+            <endian>Big</endian>
+            <encoding>16-bit two's complement signed integer. The most significant bit contains the sign.</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAinteger32BE</name>
+            <size>32</size>
+            <interpretation>Integer in the range [-2^31, 2^31 - 1]</interpretation>
+            <endian>Big</endian>
+            <encoding>32-bit two's complement signed integer. The most significant bit contains the sign.</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAinteger64BE</name>
+            <size>64</size>
+            <interpretation>Integer in the range [-2^63, 2^63 - 1]</interpretation>
+            <endian>Big</endian>
+            <encoding>64-bit two's complement signed integer first. The most significant bit contains the sign.
+            </encoding>
+         </basicData>
+         <basicData>
+            <name>HLAfloat32BE</name>
+            <size>32</size>
+            <interpretation>Single-precision floating point number</interpretation>
+            <endian>Big</endian>
+            <encoding>32-bit IEEE normalized single-precision format. See IEEE Std 754-1985</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAfloat64BE</name>
+            <size>64</size>
+            <interpretation>Double-precision floating point number</interpretation>
+            <endian>Big</endian>
+            <encoding>64-bit IEEE normalized double-precision format. See IEEE Std 754-1985</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAoctetPairBE</name>
+            <size>16</size>
+            <interpretation>16-bit value</interpretation>
+            <endian>Big</endian>
+            <encoding>Assumed to be portable among devices.</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAinteger16LE</name>
+            <size>16</size>
+            <interpretation>Integer in the range [-2^15, 2^15 - 1]</interpretation>
+            <endian>Little</endian>
+            <encoding>16-bit two's complement signed integer. The most significant bit contains the sign.</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAinteger32LE</name>
+            <size>32</size>
+            <interpretation>Integer in the range [-2^31, 2^31 - 1]</interpretation>
+            <endian>Little</endian>
+            <encoding>32-bit two's complement signed integer. The most significant bit contains the sign.</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAinteger64LE</name>
+            <size>64</size>
+            <interpretation>Integer in the range [-2^63, 2^63 - 1]</interpretation>
+            <endian>Little</endian>
+            <encoding>64-bit two's complement signed integer first. The most significant bit contains the sign.
+            </encoding>
+         </basicData>
+         <basicData>
+            <name>HLAfloat32LE</name>
+            <size>32</size>
+            <interpretation>Single-precision floating point number</interpretation>
+            <endian>Little</endian>
+            <encoding>32-bit IEEE normalized single-precision format. See IEEE Std 754-1985</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAfloat64LE</name>
+            <size>64</size>
+            <interpretation>Double-precision floating point number</interpretation>
+            <endian>Little</endian>
+            <encoding>64-bit IEEE normalized double-precision format. See IEEE Std 754-1985</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAoctetPairLE</name>
+            <size>16</size>
+            <interpretation>16-bit value</interpretation>
+            <endian>Little</endian>
+            <encoding>Assumed to be portable among hardware devices.</encoding>
+         </basicData>
+         <basicData>
+            <name>HLAoctet</name>
+            <size>8</size>
+            <interpretation>8-bit value</interpretation>
+            <endian>Big</endian>
+            <encoding>Assumed to be portable among hardware devices.</encoding>
+         </basicData>
+      </basicDataRepresentations>
+      <simpleDataTypes>
+         <simpleData>
+            <name>HLAASCIIchar</name>
+            <representation>HLAoctet</representation>
+            <units>NA</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>Standard ASCII character (see ANSI Std x3.4-1986)</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAunicodeChar</name>
+            <representation>HLAoctetPairBE</representation>
+            <units>NA</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>Unicode UTF-16 character (see The Unicode Standard, Version 3.0)</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAbyte</name>
+            <representation>HLAoctet</representation>
+            <units>NA</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>Uninterpreted 8-bit byte</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAcount</name>
+            <representation>HLAinteger32BE</representation>
+            <units>NA</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>NA</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAseconds</name>
+            <representation>HLAinteger32BE</representation>
+            <units>s</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>NA</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAmsec</name>
+            <representation>HLAinteger32BE</representation>
+            <units>ms</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>NA</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAnormalizedFederateHandle</name>
+            <representation>HLAinteger32BE</representation>
+            <units>NA</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>The type of the normalized value of a federate handle as returned by the Normalize Federate
+               Handle service. The value is appropriate for defining the range of the HLAfederate dimension for regions
+               with this dimension.
+            </semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAindex</name>
+            <representation>HLAinteger32BE</representation>
+            <units>NA</units>
+            <resolution>NA</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>NA</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAinteger64Time</name>
+            <representation>HLAinteger64BE</representation>
+            <units>NA</units>
+            <resolution>1</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>Standardized 64 bit integer time</semantics>
+         </simpleData>
+         <simpleData>
+            <name>HLAfloat64Time</name>
+            <representation>HLAfloat64BE</representation>
+            <units>NA</units>
+            <resolution>4.9E-308</resolution>
+            <accuracy>NA</accuracy>
+            <semantics>Standardized 64 bit float time</semantics>
+         </simpleData>
+      </simpleDataTypes>
+      <enumeratedDataTypes>
+         <enumeratedData>
+            <name>HLAboolean</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>Standard boolean type</semantics>
+            <enumerator>
+               <name>HLAfalse</name>
+               <value>0</value>
+            </enumerator>
+            <enumerator>
+               <name>HLAtrue</name>
+               <value>1</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAfederateState</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>State of the federate</semantics>
+            <enumerator>
+               <name>ActiveFederate</name>
+               <value>1</value>
+            </enumerator>
+            <enumerator>
+               <name>FederateSaveInProgress</name>
+               <value>3</value>
+            </enumerator>
+            <enumerator>
+               <name>FederateRestoreInProgress</name>
+               <value>5</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAtimeState</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>State of time advancement</semantics>
+            <enumerator>
+               <name>TimeGranted</name>
+               <value>0</value>
+            </enumerator>
+            <enumerator>
+               <name>TimeAdvancing</name>
+               <value>1</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAownership</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>NA</semantics>
+            <enumerator>
+               <name>Unowned</name>
+               <value>0</value>
+            </enumerator>
+            <enumerator>
+               <name>Owned</name>
+               <value>1</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAresignAction</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>Action to be performed by RTI in conjunction with resignation</semantics>
+            <enumerator>
+               <name>DivestOwnership</name>
+               <value>1</value>
+            </enumerator>
+            <enumerator>
+               <name>DeleteObjectInstances</name>
+               <value>2</value>
+            </enumerator>
+            <enumerator>
+               <name>CancelPendingAcquisitions</name>
+               <value>3</value>
+            </enumerator>
+            <enumerator>
+               <name>DeleteObjectInstancesThenDivestOwnership</name>
+               <value>4</value>
+            </enumerator>
+            <enumerator>
+               <name>CancelPendingAcquisitionsThenDeleteObjectInstancesThenDivestOwnership</name>
+               <value>5</value>
+            </enumerator>
+            <enumerator>
+               <name>NoAction</name>
+               <value>6</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAorderType</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>Order type to be used for sending attributes or interactions</semantics>
+            <enumerator>
+               <name>Receive</name>
+               <value>0</value>
+            </enumerator>
+            <enumerator>
+               <name>TimeStamp</name>
+               <value>1</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAswitch</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>NA</semantics>
+            <enumerator>
+               <name>Enabled</name>
+               <value>1</value>
+            </enumerator>
+            <enumerator>
+               <name>Disabled</name>
+               <value>0</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAsynchPointStatus</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>Joined federate synchronization point status</semantics>
+            <enumerator>
+               <name>NoActivity</name>
+               <value>0</value>
+            </enumerator>
+            <enumerator>
+               <name>AttemptingToRegisterSynchPoint</name>
+               <value>1</value>
+            </enumerator>
+            <enumerator>
+               <name>MovingToSynchPoint</name>
+               <value>2</value>
+            </enumerator>
+            <enumerator>
+               <name>WaitingForRestOfFederation</name>
+               <value>3</value>
+            </enumerator>
+         </enumeratedData>
+         <enumeratedData>
+            <name>HLAnormalizedServiceGroup</name>
+            <representation>HLAinteger32BE</representation>
+            <semantics>Service group identifier</semantics>
+            <enumerator>
+               <name>FederationManagement</name>
+               <value>0</value>
+            </enumerator>
+            <enumerator>
+               <name>DeclarationManagement</name>
+               <value>1</value>
+            </enumerator>
+            <enumerator>
+               <name>ObjectManagement</name>
+               <value>2</value>
+            </enumerator>
+            <enumerator>
+               <name>OwnershipManagement</name>
+               <value>3</value>
+            </enumerator>
+            <enumerator>
+               <name>TimeManagement</name>
+               <value>4</value>
+            </enumerator>
+            <enumerator>
+               <name>DataDistributionManagement</name>
+               <value>5</value>
+            </enumerator>
+            <enumerator>
+               <name>SupportServices</name>
+               <value>6</value>
+            </enumerator>
+         </enumeratedData>
+      </enumeratedDataTypes>
+      <arrayDataTypes>
+         <arrayData>
+            <name>HLAASCIIstring</name>
+            <dataType>HLAASCIIchar</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>ASCII string representation</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAunicodeString</name>
+            <dataType>HLAunicodeChar</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>Unicode string representation</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAopaqueData</name>
+            <dataType>HLAbyte</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>Uninterpreted sequence of bytes</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAtoken</name>
+            <dataType>HLAbyte</dataType>
+            <cardinality>0</cardinality>
+            <encoding>HLAfixedArray</encoding>
+         </arrayData>
+         <arrayData>
+            <name>HLAhandle</name>
+            <dataType>HLAbyte</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>Encoded value of a handle. The encoding is based on the type of handle</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAtransportationName</name>
+            <dataType>HLAunicodeChar</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>String whose legal value shall be a name from any row in the OMT transportation table (IEEE Std
+               1516.2-2009)
+            </semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAupdateRateName</name>
+            <dataType>HLAunicodeChar</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>String whose legal value shall be a name from any row in the OMT update rate table (IEEE Std
+               1516.2-2009)
+            </semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAlogicalTime</name>
+            <dataType>HLAbyte</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>An encoded logical time. An empty array shall indicate that the values is not defined
+            </semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAtimeInterval</name>
+            <dataType>HLAbyte</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>An encoded logical time interval. An empty array shall indicate that the values is not defined
+            </semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAhandleList</name>
+            <dataType>HLAhandle</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of encoded handles</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAinteractionSubList</name>
+            <dataType>HLAinteractionSubscription</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of interaction subscription indicators</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAargumentList</name>
+            <dataType>HLAunicodeString</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of arguments</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAobjectClassBasedCounts</name>
+            <dataType>HLAobjectClassBasedCount</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of counts of various items based on object class. In all MOM interactions that have a
+               parameter of datatype HLAobjectClassBased- Counts, if an HLAobjectClassBasedCount element of the
+               HLAobjectClassBasedCounts array would have a value (object class, 0), the HLAobjectClassBasedCount
+               element shall not be present in the HLAobjectClassBasedCounts array. In other words, only HLAobject-
+               ClassBasedCount elements that have positive counts shall be present in an HLAobjectClassBasedCounts
+               array. From this, it follows that if all object class counts have a zero value, then the HLAobjectClass-
+               BasedCounts array shall not have any elements in it; it shall be an empty HLAobjectClassBasedCounts
+               array.
+            </semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAinteractionCounts</name>
+            <dataType>HLAinteractionCount</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of interaction counts. In all MOM interactions that have a parameter of datatype
+               HLAinteractionCounts, if an HLAinteractionCount element of the HLAinteractionCounts array would have a
+               value (interaction class, 0), the HLAinteractionCount element shall not be present in the
+               HLAinteractionCounts array. In other words, only HLAinteractionCount elements that have positive counts
+               shall be present in an HLAinteractionCounts array. From this, it follows that if all interaction class
+               counts have a zero value, then the HLAinteractionCounts array shall not have any elements in it; it shall
+               be an empty HLAinteractionCounts array.
+            </semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAsynchPointList</name>
+            <dataType>HLAunicodeString</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of names of synchronization points.</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAsynchPointFederateList</name>
+            <dataType>HLAsynchPointFederate</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of joined federates and the synchronization status of each.</semantics>
+         </arrayData>
+         <arrayData>
+            <name>HLAmoduleDesignatorList</name>
+            <dataType>HLAunicodeString</dataType>
+            <cardinality>Dynamic</cardinality>
+            <encoding>HLAvariableArray</encoding>
+            <semantics>List of designators of SOM modules.</semantics>
+         </arrayData>
+      </arrayDataTypes>
+      <fixedRecordDataTypes>
+         <fixedRecordData>
+            <name>HLAinteractionSubscription</name>
+            <encoding>HLAfixedRecord</encoding>
+            <semantics>Interaction subscription information</semantics>
+            <field>
+               <name>HLAinteractionClass</name>
+               <dataType>HLAhandle</dataType>
+               <semantics>Encoded interaction class handle</semantics>
+            </field>
+            <field>
+               <name>HLAactive</name>
+               <dataType>HLAboolean</dataType>
+               <semantics>Whether subscription is active (HLAtrue=active)</semantics>
+            </field>
+         </fixedRecordData>
+         <fixedRecordData>
+            <name>HLAobjectClassBasedCount</name>
+            <encoding>HLAfixedRecord</encoding>
+            <semantics>Object class and count of associated items</semantics>
+            <field>
+               <name>HLAobjectClass</name>
+               <dataType>HLAhandle</dataType>
+               <semantics>Encoded object class handle</semantics>
+            </field>
+            <field>
+               <name>HLAcount</name>
+               <dataType>HLAcount</dataType>
+               <semantics>Number of items</semantics>
+            </field>
+         </fixedRecordData>
+         <fixedRecordData>
+            <name>HLAinteractionCount</name>
+            <encoding>HLAfixedRecord</encoding>
+            <semantics>Count of interactions of a class</semantics>
+            <field>
+               <name>HLAinteractionClass</name>
+               <dataType>HLAhandle</dataType>
+               <semantics>Encoded interaction class handle</semantics>
+            </field>
+            <field>
+               <name>HLAinteractionCount</name>
+               <dataType>HLAcount</dataType>
+               <semantics>Number of interactions</semantics>
+            </field>
+         </fixedRecordData>
+         <fixedRecordData>
+            <name>HLAsynchPointFederate</name>
+            <encoding>HLAfixedRecord</encoding>
+            <semantics>A particular joined federate and its synchronization point status</semantics>
+            <field>
+               <name>HLAfederate</name>
+               <dataType>HLAhandle</dataType>
+               <semantics>Encoded joined federate handle</semantics>
+            </field>
+            <field>
+               <name>HLAfederateSynchStatus</name>
+               <dataType>HLAsynchPointStatus</dataType>
+               <semantics>Synchronization status of the particular joined federate</semantics>
+            </field>
+         </fixedRecordData>
+      </fixedRecordDataTypes>
+      <variantRecordDataTypes/>
+   </dataTypes>
+</objectModel>
