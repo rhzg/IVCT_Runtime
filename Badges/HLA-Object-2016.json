@@ -4,7 +4,7 @@
 	"description"	:	"This badge verifies that the federate sends and receives only the objects and interactions specified in its SOM.",
 	"graphics"		:	"/some/icon.png",
 	"packageName"	:	"fr.....",
-	"tsRunTimefolder":	"..../bin",
+	"tsRunTimeFolder":	"TS_CS_Object\\TS_CS_Object\\bin",
 	"dependency"	:	[],
 	"requirements"	:	[
 		{

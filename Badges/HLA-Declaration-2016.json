@@ -4,7 +4,7 @@
 	"description"	:	"This badge verifies that the federate only publishes and subscribes objects, interactions and attributes specified in its SOM.",
 	"graphics"		:	"/some/icon.png",
 	"packageName"	:	"fr.....",
-	"tsRunTimefolder":	"..../bin",
+	"tsRunTimeFolder":	"TS_CS_Declaration\\TS_CS_Declaration\\bin",
 	"dependency"	:	[],
 	"requirements"	:	[
 		{
