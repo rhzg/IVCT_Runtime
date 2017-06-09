@@ -72,7 +72,7 @@
 		<reflectAttributeValues section="6.11" isCallback="true" isUsed="true"/>
 		<sendInteraction section="6.12" isCallback="false" isUsed="true"/>
 		<receiveInteraction section="6.13" isCallback="true" isUsed="true"/>
-		<deleteObjectInstance section="6.14" isCallback="false" isUsed="true"/>
+		<deleteObjectInstance section="6.14" isCallback="false" isUsed="false"/>
 		<removeobjectinstance section="6.15" isCallback="true" isUsed="true"/>
 		<localDeleteObjectInstance section="6.16" isCallback="false" isUsed="false"/>
 		<attributesInScope section="6.17" isCallback="true" isUsed="false"/>
