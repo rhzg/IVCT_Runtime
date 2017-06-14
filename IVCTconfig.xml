@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivctConfig>
   <pathNames>
-    <sutDir>C:\projects\MSG134\IVCT_Runtime\IVCTsut</sutDir>
-    <testSuites>C:\projects\MSG134\Demo\IVCTrun</testSuites>
+    <sutDir>C:\Projekte\MSG134\IVCT_Runtime\IVCTsut</sutDir>
   </pathNames>
 </ivctConfig>
