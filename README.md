@@ -1,16 +1,11 @@
 # IVCT Runtime
 
+This is example configuration for a IVCT deployment.
 
-To use this example
+1) Set the global variable IVCT_HOME is used for the test engine bat-file to configure the test suites.
 
-1) Set the global variable  IVCT_HOME  to the absolute path of the folder where the   IVCTconfig.xml  file is located.
+2) The Badges folder contains the definitions files for the interoperability requirements of the existing badges
 
-2) Edit the  IVCTconfig.xml   to set the absolute path of the folders of  sutDir  and  testSuites  these can stay where they were extracted from the zip files or moved to another folder of the file system as desired.
+3) The IVCTsut folder contains the system under test configurations and the results from the test cases within the capability badges.
 
-3) To add a new test suite to the system:
-
-3.1) Add the new test suite folder to the  IVCTrun  folder.
-
-3.2) Edit the  IVCTrun\IVCTtestsuites.xml and add the testSuite name and the packageName for the new test suite.
-
-3.3) Create the new  TcParam.json  to describe the test case parameters required for the new test suite.
+4) The TC folder contains a typical configuration to execute the test engine
