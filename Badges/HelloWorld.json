@@ -1,7 +1,7 @@
 {
 	"id" 			: 	"HelloWorld",
 	"name" 			: 	"HelloWorld Tutorial Badge",
-	"description"	:	"This is a simple example for capability badge to thest the compliance of an federate to the hello world federation.",
+	"description"	:	"This is a simple example for capability badge to test the compliance of an federate to the hello world federation.",
 	"graphics"		:	"/some/icon.png",
 	"tsRunTimeFolder":	"TS_HelloWorld\\TS_HelloWorld\\bin",
 	"dependency"	:	["HLA-BASE-2016"],
