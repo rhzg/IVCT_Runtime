@@ -9,3 +9,5 @@ This is example configuration for a IVCT deployment.
 3) The IVCTsut folder contains the system under test configurations and the results from the test cases within the capability badges.
 
 4) The TC folder contains a typical configuration to execute the test engine
+
+More information can be found in the wiki (https://github.com/MSG134/IVCT_Runtime/wiki)
